@@ -6,6 +6,7 @@ import { RequiredSelectComponent } from './required-select/required-select.compo
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardSettingsComponent } from './dashboard-settings/dashboard-settings.component';
 import { SharedRoutingModule } from './shared-routing.module';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SharedRoutingModule } from './shared-routing.module';
     FormsModule,
     ReactiveFormsModule,
     SharedRoutingModule,
+    DragDropModule,
   ],
   exports: [
     CommonModule,

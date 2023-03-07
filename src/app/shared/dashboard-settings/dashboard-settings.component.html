@@ -1,3 +1,25 @@
-<p>
-dashboard-settings works!
-</p>
+<div class="example-container d-flex justify-content-between">
+  <div>
+    <h2>Widgets</h2>
+    <div
+      cdkDropList
+      [cdkDropListData]="widgetsName"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div class="example-box" *ngFor="let item of widgets" cdkDrag>
+        {{ item.id + '.  ' + item.name }}
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>Aperçu</h2>
+    <div class="line">
+      <div *ngFor="let r of display" class="row m-0">
+        <ng-container *ngFor="let c of r">
+          <div class="box size{{ c.size }}">{{ c.id }}</div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
