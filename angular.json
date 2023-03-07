@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-14-features-demo": {
+    "demo-dashboard-settings": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -42,19 +42,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-14-features-demo",
+            "outputPath": "dist/demo-dashboard-settings",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -94,10 +89,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-14-features-demo:build:production"
+              "browserTarget": "demo-dashboard-settings:build:production"
             },
             "development": {
-              "browserTarget": "angular-14-features-demo:build:development"
+              "browserTarget": "demo-dashboard-settings:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -105,7 +100,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-14-features-demo:build"
+            "browserTarget": "demo-dashboard-settings:build"
           }
         },
         "test": {
@@ -116,13 +111,8 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }
